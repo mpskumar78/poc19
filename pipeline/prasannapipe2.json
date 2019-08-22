@@ -1,0 +1,9 @@
+{
+	"name": "prasannapipe2",
+	"properties": {
+		"concurrency": 2,
+		"annotations": [
+			"Multitest"
+		]
+	}
+}
