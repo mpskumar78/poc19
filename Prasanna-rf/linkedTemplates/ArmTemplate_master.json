@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "Prasanna-rf"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage_Prasanna_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage_Prasanna'"
+		},
+		"FtpServerPubllic_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FtpServerPubllic'"
+		},
+		"FtpServer_Prasanna_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FtpServer_Prasanna'"
+		},
+		"FtpServerPubllic_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "ftp://test.rebex.net/"
+		},
+		"FtpServerPubllic_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "demo"
+		},
+		"FtpServer_Prasanna_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "ftp://test.rebex.net/"
+		},
+		"FtpServer_Prasanna_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "demo"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas Token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorage_Prasanna_connectionString": {
+						"value": "[parameters('AzureBlobStorage_Prasanna_connectionString')]"
+					},
+					"FtpServerPubllic_password": {
+						"value": "[parameters('FtpServerPubllic_password')]"
+					},
+					"FtpServer_Prasanna_password": {
+						"value": "[parameters('FtpServer_Prasanna_password')]"
+					},
+					"FtpServerPubllic_properties_typeProperties_host": {
+						"value": "[parameters('FtpServerPubllic_properties_typeProperties_host')]"
+					},
+					"FtpServerPubllic_properties_typeProperties_userName": {
+						"value": "[parameters('FtpServerPubllic_properties_typeProperties_userName')]"
+					},
+					"FtpServer_Prasanna_properties_typeProperties_host": {
+						"value": "[parameters('FtpServer_Prasanna_properties_typeProperties_host')]"
+					},
+					"FtpServer_Prasanna_properties_typeProperties_userName": {
+						"value": "[parameters('FtpServer_Prasanna_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
