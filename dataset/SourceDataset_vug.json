@@ -1,0 +1,26 @@
+{
+	"name": "SourceDataset_vug",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FtpServer_Prasanna",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FtpServerLocation",
+				"fileName": "readme.txt"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
+}
