@@ -28,8 +28,9 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true
+							"type": "FtpReadSettings",
+							"recursive": true,
+							"useBinaryTransfer": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
@@ -38,11 +39,6 @@
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings",
-							"maxConcurrentConnections": 1,
-							"copyBehavior": "PreserveHierarchy"
-						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
