@@ -1,0 +1,20 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"description": "FTP ",
+		"annotations": [
+			"prasanna"
+		],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2019-08-22T14:08:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
