@@ -2,16 +2,15 @@
 	"name": "DestinationDataset_vug",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage_Prasanna",
+			"referenceName": "FtpServer_Prasanna",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": "TestFTP",
-				"container": "vulnerability-assessment"
+				"type": "FtpServerLocation",
+				"fileName": "readme.txt"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
