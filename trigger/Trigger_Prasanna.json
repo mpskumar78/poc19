@@ -1,5 +1,5 @@
 {
-	"name": "Trigger_vug",
+	"name": "Trigger_Prasanna",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
@@ -16,7 +16,7 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 1,
-				"startTime": "08/22/2019 2:11 AM",
+				"startTime": "08/22/2019 10:11 AM",
 				"timeZone": "UTC"
 			}
 		}
