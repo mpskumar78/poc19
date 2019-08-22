@@ -1,10 +1,9 @@
 {
-	"name": "prasanna-task",
+	"name": "ftpfrompublic",
 	"properties": {
-		"description": "FTP file",
 		"activities": [
 			{
-				"name": "Copy_vug",
+				"name": "Copy_7gl",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -21,7 +20,7 @@
 					},
 					{
 						"name": "Destination",
-						"value": "vulnerability-assessment//TestFTP"
+						"value": "shared-container//testfile"
 					}
 				],
 				"typeProperties": {
@@ -43,7 +42,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
 							"maxConcurrentConnections": 1,
-							"copyBehavior": "PreserveHierarchy"
+							"copyBehavior": "MergeFiles"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -51,22 +50,31 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"redirectIncompatibleRowSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "shared-container"
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_vug",
+						"referenceName": "SourceDataset_7gl",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_vug",
+						"referenceName": "DestinationDataset_7gl",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": []
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

@@ -1,12 +1,12 @@
 {
-	"name": "Trigger_vug",
+	"name": "Trigger_Prasanna",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "prasanna-task",
+					"referenceName": "ftpfrompublic",
 					"type": "PipelineReference"
 				}
 			}
@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Minute",
-				"interval": 1,
+				"interval": 5,
 				"startTime": "2019-08-22T14:11:00.000Z",
 				"timeZone": "UTC"
 			}

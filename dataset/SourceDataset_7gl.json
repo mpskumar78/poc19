@@ -1,8 +1,8 @@
 {
-	"name": "DestinationDataset_vug",
+	"name": "SourceDataset_7gl",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "FtpServer_Prasanna",
+			"referenceName": "FtpServerPubllic",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -22,5 +22,6 @@
 				"type": "String"
 			}
 		]
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

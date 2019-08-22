@@ -1,16 +1,17 @@
 {
-	"name": "DestinationDataset_vug",
+	"name": "DestinationDataset_7gl",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "FtpServer_Prasanna",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "FtpServerLocation",
-				"fileName": "readme.txt"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "testfile",
+				"container": "shared-container"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -22,5 +23,6 @@
 				"type": "String"
 			}
 		]
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
