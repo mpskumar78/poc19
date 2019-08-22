@@ -1,0 +1,27 @@
+{
+	"name": "DestinationDataset_vug",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Prasanna",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "TestFTP",
+				"container": "vulnerability-assessment"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
+}
