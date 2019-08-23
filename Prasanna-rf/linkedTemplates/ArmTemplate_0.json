@@ -459,7 +459,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Shared"
+							"notebookPath": "/Shared/PrasannaNotebook"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",
