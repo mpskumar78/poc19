@@ -8,7 +8,13 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorageCommon_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage_Prasanna_connectionString": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
 		"FtpServerPubllic_password": {
@@ -16,6 +22,9 @@
 		},
 		"FtpServer_Prasanna_password": {
 			"value": ""
+		},
+		"AzureKeyVaultPrasanna_properties_typeProperties_baseUrl": {
+			"value": "https://PrasannaKeyVault.vault.azure.net/"
 		},
 		"FtpServerPubllic_properties_typeProperties_host": {
 			"value": "ftp://test.rebex.net/"
