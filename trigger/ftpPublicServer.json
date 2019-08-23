@@ -4,7 +4,7 @@
 		"annotations": [
 			"prasanna"
 		],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
