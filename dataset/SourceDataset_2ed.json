@@ -1,23 +1,36 @@
 {
-	"name": "DestinationDataset_vug",
+	"name": "SourceDataset_2ed",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "FtpServer_Prasanna",
+			"referenceName": "AzureBlobStorageCommon",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "FtpServerLocation",
-				"fileName": "readme.txt"
+				"type": "AzureBlobStorageLocation",
+				"container": "shared-container"
 			},
 			"columnDelimiter": ",",
+			"rowDelimiter": "\r",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
 		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
 			{
 				"type": "String"
 			}

@@ -27,10 +27,8 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "FtpReadSettings",
-							"recursive": true,
-							"maxConcurrentConnections": 1,
-							"useBinaryTransfer": true
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
@@ -62,7 +60,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_7gl",
+						"referenceName": "DestinationDataset_7gl",
 						"type": "DatasetReference"
 					}
 				],
@@ -72,6 +70,33 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Prasanna_Notebook",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Copy_7gl",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 2,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/PrasannaNotebook"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
