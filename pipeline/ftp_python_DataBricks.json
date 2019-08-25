@@ -1,0 +1,10 @@
+{
+	"name": "ftp_python_DataBricks",
+	"properties": {
+		"description": "ftp_python_DataBricks",
+		"concurrency": 1,
+		"annotations": [
+			"ftp_python_databricks"
+		]
+	}
+}
